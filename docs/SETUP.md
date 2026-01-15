@@ -63,4 +63,7 @@ admin credentials:
 https://docs.weblate.org/en/weblate-5.15.2/admin/machine.html#mt-google-translate-api-v3
 
 - You need to create a new project or restore project from backup.
+P.S. there is zip file with project backup in the root of the repository.
+muso-ai-*.zip file is the backup of the project.
+After restoring the project, you need to sync the project with the related git repository.
 
