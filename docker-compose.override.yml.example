@@ -1,0 +1,19 @@
+services:
+  weblate:
+    image: weblate/weblate:latest
+    environment:
+      WEBLATE_EMAIL_HOST: smtp.example.com
+      WEBLATE_EMAIL_HOST_USER: user
+      WEBLATE_EMAIL_HOST_PASSWORD: pass
+      WEBLATE_ADMIN_EMAIL: admin@example.com
+      WEBLATE_ADMIN_PASSWORD: admin
+      WEBLATE_SERVER_EMAIL: weblate@example.com
+      WEBLATE_DEFAULT_FROM_EMAIL: weblate@example.com
+      WEBLATE_SITE_DOMAIN: weblate.example.com
+      # WEBLATE_DEBUG: 1
+      # WEBLATE_LOGLEVEL: DEBUG
+      WEBLATE_MACHINERY: weblate.machinery.weblatememory.WeblateMemory,machinery_custom.CustomGoogleV3Advanced
+    volumes:
+    - ./machinery_custom:/app/data/python/machinery_custom
+    ports:
+    - 80:8080
